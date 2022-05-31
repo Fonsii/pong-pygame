@@ -41,6 +41,5 @@ class Ball():
         for racket in rackets:
             if self.position.colliderect(racket.position):
                 self.xSpeed *= -1
-                print('collision')
                 return True
         return False

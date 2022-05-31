@@ -7,6 +7,7 @@ WIDTH, HEIGHT = 800, 400
 
 pygame.init()
 screen = pygame.display.set_mode((WIDTH,HEIGHT))
+pygame.display.set_caption('Pong')
 clock = pygame.time.Clock()
 fontText = pygame.font.SysFont('lucidaconsole', 20)
 fontScores = pygame.font.SysFont('lucidaconsole', 50)
@@ -103,8 +104,6 @@ def main():
 
 
 def drawRackets(screen, surface, racketLeft, racketRight):
-    screen.blit(surface, racketLeft.position, racketLeft.position)
-    screen.blit(surface, racketRight.position, racketRight.position)
 
     racketLeft.doMove()
     racketRight.doMove()
