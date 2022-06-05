@@ -1,7 +1,7 @@
 # pong-pygame
 <p align="center">
   <span>English</span> |
-  <a href="https://github.com/alvarotrigo/fullPage.js/tree/master/lang/spanish#fullpagejs">Español</a>
+  <a href="https://github.com/Fonsii/pong-pygame/blob/main/lang/spanish/README.md">Español</a>
 </p>
 
 ---
@@ -23,6 +23,6 @@ Terminal:
   python main.py
 
 ```
-## Question
+## Ask a Question
 
 To ask a question you can use [the GitHub Discussion Forum](https://github.com/Fonsii/pong-pygame/discussions)
