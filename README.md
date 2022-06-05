@@ -8,9 +8,6 @@
 
 This is a simple pong game build in pygame.
 
-- [Usage](https://github.com/Fonsii/pong-pygame/blob/main/README.md#usage)
-- [Ask a question](https://github.com/Fonsii/pong-pygame/blob/main/README.md#question)
-
 ## Usage
 
 To run this repository you need to have a venv with pygame installed or globally installed
@@ -26,7 +23,6 @@ Terminal:
   python main.py
 
 ```
----
 ## Question
 
 To ask a question you can use [the GitHub Discussion Forum](https://github.com/Fonsii/pong-pygame/discussions)
