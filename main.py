@@ -4,6 +4,8 @@ from Ball import Ball
 from sys import exit
 
 WIDTH, HEIGHT = 800, 400
+IDLE = True 
+WINNING = False
 
 pygame.init()
 screen = pygame.display.set_mode((WIDTH,HEIGHT))
@@ -13,15 +15,14 @@ fontText = pygame.font.SysFont('lucidaconsole', 20)
 fontScores = pygame.font.SysFont('lucidaconsole', 50)
 
 def main():
+    global WIDTH, HEIGHT, IDLE, WINNING
     surface = pygame.Surface((WIDTH,HEIGHT))
+
 
     racketLeft = Racket(15,25)
     racketRight = Racket(785,158)
     ball = Ball()
   
-    IDLE = True
-    WINNING = False
-
     while True:
         surface.fill('Red')
         screen.blit(surface, (0,0))
@@ -46,7 +47,6 @@ def main():
                     racketRight.hold(1)
                 elif event.key == 27:
                     exit()
-                pass
             if event.type == pygame.KEYUP:
                 if event.key == 115:
                     racketLeft.release(0)
@@ -65,14 +65,15 @@ def main():
 
                     IDLE = True
                     WINNING = False
-            drawRackets(screen, surface, racketLeft, racketRight)
+            drawRackets(screen, racketLeft, racketRight)
+        
         if not IDLE:
             screen.blit(surface, ball.position, ball.position)
             refreshRackets, score = ball.doMove([racketLeft, racketRight])
             if not score:
                 ball.draw(screen)
                 if refreshRackets:
-                    drawRackets(screen, surface, racketLeft, racketRight)
+                    drawRackets(screen, racketLeft, racketRight)
             else:
                 if ball.position.x < 15:
                     racketLeft.score += 1
@@ -103,8 +104,7 @@ def main():
         pygame.display.flip()
 
 
-def drawRackets(screen, surface, racketLeft, racketRight):
-
+def drawRackets(screen, racketLeft, racketRight):
     racketLeft.doMove()
     racketRight.doMove()
 

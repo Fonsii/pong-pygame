@@ -14,11 +14,6 @@ class Racket():
         screen.blit(self.surfaceRacket, self.position)
 
 
-    def move(self, positionX, positionY):
-        self.postion.x = positionX
-        self.postion.y = positionY
-    
-
     def doMove(self):
         maxPosition =  pygame.display.get_surface().get_size()[1] - self.surfaceRacket.get_size()[1] - 2
         if self.flagsMove[0]:

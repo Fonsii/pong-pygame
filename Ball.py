@@ -12,10 +12,8 @@ class Ball():
         if self.xSpeed == 0:
             self.xSpeed = 1
         self.ySpeed = int(self.speed * math.cos(angle))
-        print(self.xSpeed)
-        print(self.ySpeed)
     
-
+    
     def draw(self, screen):
         screen.blit(self.surfaceBall, self.position)
 
